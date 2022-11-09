@@ -1,0 +1,50 @@
+body {
+    overflow-x: hidden;
+}
+.problems {
+    max-width: 700px;
+    h5 {
+        color: #D1D5DB;
+        font-size: 24px;
+    }
+    p {
+        color: #6B7280;
+        font-size: medium;
+    }
+    a {
+        color: #6B7280;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 17px;
+        
+        &:hover {
+            color: #6B7280;
+        }
+    }
+}
+.ready {
+    width: 70%;
+    max-width: 700px;
+
+    h2 {
+        color: #D1D5DB;
+    }
+    h3 {
+        color: whitesmoke;
+    }
+    textarea {
+        width: 80%;
+        height: 200px;
+    }
+    button {
+        width: 80%;
+    }
+}
+footer {
+    background-color: #1F2937;
+    height: 50px;
+    margin-top: -25px;
+    p {
+        margin-top: 15px;
+    }
+}
