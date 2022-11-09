@@ -49,3 +49,15 @@ footer {
         margin-top: 15px;
     }
 }
+@media(max-width:500px) {
+    .ready {
+        width: 100%;
+
+        textarea , button {
+            width: 70%;
+        }
+    }
+}
+@media screen {
+    
+}
