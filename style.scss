@@ -1,6 +1,5 @@
 body {
-    width: 100vw;
-    overflow-x: hidden;
+    margin: 0;
 }
 .problems {
     max-width: 700px;
@@ -58,6 +57,68 @@ footer {
         }
     }
 }
-@media screen {
-    
+.root {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    color: whitesmoke;
+
+    .table1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border: thin solid whitesmoke;
+
+        h5 {
+            font-size: 20px;
+            margin: 0;
+            margin-top: 10px;
+        }
+        table {
+            border-color: whitesmoke;
+        }
+    }
+}
+.grid-container{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: black;
+        }
+    }
+    div {
+        width: 144px;
+        height: 144px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        img {
+            padding-inline: 40px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+}
+@media (min-width:500px) {
+    .hero-img {
+        width: 60% !important;
+    }
 }

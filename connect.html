@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WalletConnect</title>
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="icon" href="/images/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body class="bg-black">
+    <header class="d-flex w-100 p-3 align-items-center">
+        <img class="m-0 me-auto" height="25px" src="/images/logo.svg" alt="logo">
+        <p class="m-0 border border-light rounded p-2 text-white">EN</p>
+    </header>
+    <section class="p-3">
+        <article class="text-white">
+            <p class="m-0">Connect to wallet</p>
+            <a href="wallet.html" class="text-white text-decoration-none fs-6 m-0"><i class="fa-solid fa-arrow-left fs-6"></i> Go back</a>
+        </article>
+    </section>
+    <main class="px-3">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Mnemonic</button>
+              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">KeyStore</button>
+              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Private Key</button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                <div class="m-block">
+                    <label class="mt-4 mb-2 text-white-50" for="mname">Enter your 12/24 word phrase</label><br>
+                    <input class="border rounded p-2 w-100 bg-" type="text" id="mname" placeholder="Enter your mnemonic" />
+                    <small class="text-white d-block">Please separate each Mnemonic Phrase with a space.</small>
+                    
+                    <label class="mt-4 mb-2 text-white-50" for="memailId">Enter your email address</label>
+                    <input class="border rounded p-2 w-100 bg-" type="email" id="memailid" placeholder="Enter your email" />
+                    <small class="text-white d-block">Your registered email address.</small>
+                    
+                    <label class="mt-4 mb-2 text-white-50" for="mwalletAddress">Enter your wallet address</label>
+                    <input class="border rounded p-2 w-100 bg-" type="text" id="mwalletAddress" placeholder="Enter your wallet address" />
+
+                    <button class="btn bg-info mt-4 fw-bold px-4 text-black" id="mButton">Import</button>
+                </div>
+                <div class="bg-white p-4 rounded d-none errorM mt-4">An error occured while attempting to add your wallet.
+                    <br>Please try again later
+                    <hr class="my-4">
+                    <button class="bg-info rounded fw-bold border-info closeM">Close</button>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                <div class="k-block">
+                    <label class="mt-4 mb-2 text-white-50" for="kemailId">Enter your email address</label>
+                    <input class="border rounded p-2 w-100 bg-" type="email" id="kemailid" placeholder="Enter your email" />
+                    
+                    <label class="mt-4 mb-2 text-white-50" for="kwalletAddress">Enter your wallet address</label>
+                    <input class="border rounded p-2 w-100 bg-" type="text" id="kwalletAddress" placeholder="Enter your wallet address" />
+                    
+                    <button class="btn bg-info mt-4 fw-bold px-4 text-black" id="kButton">Connect Wallet</button>
+                </div>
+                <div class="bg-white p-4 rounded d-none errorK mt-4">An error occured while attempting to add your wallet.
+                    <br>Please try again later
+                    <hr class="my-4">
+                    <button class="bg-info rounded fw-bold border-info closeK">Close</button>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+                <div class="p-block">
+                    <label class="mt-4 mb-2 text-white-50" for="privateKey">Please enter your private key</label><br>
+                    <input class="border rounded p-2 w-100 bg-" type="text" id="privateKey" placeholder="Enter your private key" />
+                    <small class="text-white d-block">Input the BIP39/BIP44 recovery phrase here to restore the Mnemonic keys that manage your acccounts.</small>
+                    
+                    <label class="mt-4 mb-2 text-white-50" for="pwalletPassword">Enter your wallet password</label>
+                    <input class="border rounded p-2 w-100 bg-" type="text" id="pwalletPassword" placeholder="Enter your temporary password" />
+                    
+                    <label class="mt-4 mb-2 text-white-50" for="pemailId">Enter your email</label>
+                    <input class="border rounded p-2 w-100 bg-" type="email" id="pemailid" placeholder="Enter your email address" />
+                    
+                    <button class="btn bg-info mt-4 fw-bold px-4 text-black" id="pButton">Restore</button>
+                </div>
+                <div class="bg-white p-4 rounded d-none errorP mt-4">An error occured while attempting to add your wallet.
+                    <br>Please try again later
+                    <hr class="my-4">
+                    <button class="bg-info rounded fw-bold border-info closeP">Close</button>
+                </div>
+            </div>
+          </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./connectM.js"></script>
+    <script src="./connectK.js"></script>
+    <script src="./connectP.js"></script>
+    <script src="https://kit.fontawesome.com/c36b48a40a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  
+</body>
+
+</html>

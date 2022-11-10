@@ -1,6 +1,5 @@
 body {
-  width: 100vw;
-  overflow-x: hidden;
+  margin: 0;
 }
 
 .problems {
@@ -57,5 +56,67 @@ footer p {
   }
   .ready textarea, .ready button {
     width: 70%;
+  }
+}
+.root {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  color: whitesmoke;
+}
+.root .table1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: thin solid whitesmoke;
+}
+.root .table1 h5 {
+  font-size: 20px;
+  margin: 0;
+  margin-top: 10px;
+}
+.root .table1 table {
+  border-color: whitesmoke;
+}
+
+.grid-container {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.grid-container a {
+  text-decoration: none;
+  color: black;
+}
+.grid-container a:hover {
+  color: black;
+}
+.grid-container div {
+  width: 144px;
+  height: 144px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.grid-container div img {
+  padding-inline: 40px;
+  width: 100%;
+}
+.grid-container div h1 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (min-width: 500px) {
+  .hero-img {
+    width: 60% !important;
   }
 }/*# sourceMappingURL=style.css.map */
