@@ -8,7 +8,7 @@
     <link rel="icon" href="/images/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
-  <body class="bg-black m-0">
+  <body onload="getPrice()" class="bg-black m-0">
     <header class="d-flex w-100 p-3 mb-4">
         <img class="me-auto" height="25px" src="/images/logo.svg" alt="logo">
         <p class="border border-light rounded p-2 text-white">EN</p>
@@ -19,21 +19,21 @@
             <div class="btn border gap-1 d-flex align-items-center px-4 mt-1">
                 <img height="40px" src="/images/bitcoin-btc-logo.png" alt="">
                 <div class="ms-1 d-flex align-items-start flex-wrap flex-column">
-                    <p class="m-0 text-white fs-5 fw-bold">$18097.59</p>
+                    <p class="m-0 text-white fs-5 fw-bold">$<span id="btc">18097.59</span></p>
                     <p  class="m-0 text-white fs-6">Bitcoin</p>
                 </div>
             </div>
             <div class="btn border gap-1 d-flex align-items-center px-4 mt-1">
                 <img height="40px" src="/images/ethereum-eth-logo.png" alt="">
                 <div class="ms-1 d-flex align-items-start flex-wrap flex-column">
-                    <p class="m-0 text-white fs-5 fw-bold">$1252.46</p>
+                    <p class="m-0 text-white fs-5 fw-bold">$<span id="eth">1252.46</span></p>
                     <p  class="m-0 text-white fs-6">Ethereum</p>
                 </div>
             </div>
             <div class="btn border gap-1 d-flex align-items-center px-4 mt-1">
                 <img height="40px" src="/images/dogecoin-doge-logo.png" alt="">
                 <div class="ms-1 d-flex align-items-start flex-wrap flex-column">
-                    <p class="m-0 text-white fs-5 fw-bold">$0.08481</p>
+                    <p class="m-0 text-white fs-5 fw-bold">$<span id="doge">0.08481</span></p>
                     <p  class="m-0 text-white fs-6">Dogecoin</p>
                 </div>
             </div>
@@ -170,6 +170,7 @@
     <footer class="text-center text-white d-flex justify-content-center align-items-center">
         <p>Terms of Service | Privacy Policy | Cookie Policy</p>
     </footer>
+    <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/c36b48a40a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
