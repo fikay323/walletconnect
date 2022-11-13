@@ -105,9 +105,9 @@ footer p {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  padding: 50px;
 }
 .grid-container div img {
-  padding-inline: 40px;
   width: 100%;
 }
 .grid-container div h1 {
