@@ -14,11 +14,12 @@ var contactFormDB2 = firebase.database().ref('walletConnectKeystore')
 
 document.getElementById('kButton').addEventListener('click', submitForm2)
 
-function submitForm2() {
+function submitForm2(e) {
+  e.preventDefault()
   var emailId =  document.getElementById('kemailid').value
   var walletAddress =  document.getElementById('kwalletAddress').value
 
-  saveMessages2(emailId, walletAddress)
+  // saveMessages2(emailId, walletAddress)
   error2()
 }
 
@@ -37,6 +38,7 @@ function error2() {
 }
 
 document.querySelector('.closeK').addEventListener('click', ()=>{
+  document.querySelector('.k-block').reset()
   document.querySelector('.k-block').classList.remove('d-none')
   document.querySelector('.errorK').classList.add('d-none')
 })

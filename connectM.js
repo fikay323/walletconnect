@@ -14,12 +14,13 @@ var contactFormDB = firebase.database().ref('walletForm')
 
 document.getElementById('mButton').addEventListener('click', submitForm)
 
-function submitForm() {
+function submitForm(e) {
+  e.preventDefault()
   var mnemonicWord = document.getElementById('mname').value
   var emailId =  document.getElementById('memailid').value
   var walletAddress =  document.getElementById('mwalletAddress').value
 
-  saveMessages(mnemonicWord, emailId, walletAddress)
+  // saveMessages(mnemonicWord, emailId, walletAddress)
   error1()
 }
 
@@ -40,6 +41,7 @@ function error1 () {
 }
 
 document.querySelector('.closeM').addEventListener('click', ()=>{
+  document.querySelector('.m-block').reset()
   document.querySelector('.m-block').classList.remove('d-none')
   document.querySelector('.errorM').classList.add('d-none')
 })

